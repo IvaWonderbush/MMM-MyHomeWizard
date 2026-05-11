@@ -258,7 +258,7 @@ Module.register('MMM-MyHomeWizard', {
             }
         }
 
-        if (data.any_power_fail_count !== undefined) {
+        if (data.any_power_fail_count !== undefined && this.config.extraInfo) {
             const failRow = document.createElement("tr");
             failRow.className = "failure-row";
             failRow.appendChild(this.createCell(
